@@ -8,5 +8,6 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgba(25, 25, 25, 0.974);
+  background-color: rgb(28, 91, 146);
+  scroll-behavior: smooth;
 }
