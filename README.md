@@ -48,3 +48,23 @@ Além disso, botões de navegação são exibidos para permitir a mudança de p�
 
 4. **Conclusão**
    O componente Main é crucial para a experiência do usuário ao visualizar e interagir com a lista de personagens da série "Rick and Morty". Ele facilita a navegação entre páginas, exibe detalhes dos personagens e proporciona uma experiência de usuário fluida e envolvente.
+
+## Hook useFetchApi
+
+Este hook é uma função customizada do React que facilita a requisição de dados de uma API. Ele gerencia o estado de carregamento, `sucesso` e `erro` da requisição.
+
+1. **Hook useFetchAPi**:
+
+Utiliza o hook useState para criar o estado `data`, que armazena os resultados da requisição, informações adicionais (como `paginação`), `estado de carregamento` e qualquer `erro` que possa ocorrer.
+O estado inicial de data é um objeto com results `vazio`, info `vazio`, loading como `true` e error como `null`.
+{ const [data, setData] = useState({ results: [], info: {}, loading: true, error: null })}
+
+2. **Efeito Colateral (useEffect):**
+   Utiliza o hook `useEffect` para fazer a requisição à API quando o endpoint fornecido como parâmetro mudar.
+   Quando o `endpoint` muda, o estado loading é definido como `true`, indicando que a requisição está em `andamento`.
+   Faz uma requisição GET para o endpoint usando a instância do Axios configurada anteriormente.
+   Se a requisição for `bem-sucedida`, atualiza o estado `data` com os `resultados` da requisição, `informações adicionais `e define loading como `false`.
+   Se a requisição falhar, atualiza o estado data com o `erro` e define loading como `false`.
+   Retorno:
+
+Retorna o estado data, que contém os resultados da requisição, informações adicionais, estado de carregamento e qualquer `erro` que tenha `ocorrido`.
