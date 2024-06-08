@@ -56,14 +56,16 @@ export const Main = () => {
       )}
       <div className="flex gap-4 p-6 justify-between mt-4 w-full px-4">
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+          className={`bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors duration-300 ${!info.prev ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'
+            }`}
           onClick={handlePreviousPage}
           disabled={!info.prev}
         >
           Previous Page
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+          className={`bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors duration-300 ${!info.next ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'
+            }`}
           onClick={handleNextPage}
           disabled={!info.next}
         >
