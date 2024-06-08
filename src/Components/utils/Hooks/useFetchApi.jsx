@@ -9,7 +9,7 @@ export const useFetchApi = (endpoint) => {
   const [data, setData] = useState({ results: [], info: {}, loading: true, error: null })
 
   useEffect(() => {
-    setData((prevState) => ({ ...prevState, loading: true })); // Set loading to true when fetching new data
+    setData((prevState) => ({ ...prevState, loading: true }));
     api.get(endpoint).then((response) => {
       setData((prevState) => ({
         ...prevState,
