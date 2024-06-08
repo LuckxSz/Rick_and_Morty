@@ -2,21 +2,29 @@ import { useEffect, useState } from "react";
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: "https://rickandmortyapi.com/api/character",
+  baseURL: "https://rickandmortyapi.com/api",
 })
 
-export const useFetchApi = (url) => {
-  const [data, setData] = useState({ data: [{}], loading: true, error: null })
-
+export const useFetchApi = (endpoint) => {
+  const [data, setData] = useState({ results: [], info: {}, loading: true, error: null })
 
   useEffect(() => {
-    api.get(url).then((response) => {
-      setData((prevState) => ({ ...prevState, data: response.data.results }))
+    setData((prevState) => ({ ...prevState, loading: true })); // Set loading to true when fetching new data
+    api.get(endpoint).then((response) => {
+      setData((prevState) => ({
+        ...prevState,
+        results: response.data.results,
+        info: response.data.info,
+        loading: false,
+      }))
     }).catch((err) => {
-      setData((prevState) => ({ ...prevState, error: err }))
-    }).finally(() => {
-      setData((prevState) => ({ ...prevState, loading: false }))
+      setData((prevState) => ({
+        ...prevState,
+        error: err,
+        loading: false,
+      }))
     })
-  }, [url])
+  }, [endpoint])
+
   return data
 }

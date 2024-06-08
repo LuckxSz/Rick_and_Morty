@@ -1,4 +1,4 @@
-import { Footer } from "./Components/Footer/Footer"
+
 import { Header } from "./Components/Header/Header"
 import { Main } from "./Components/Main/Main"
 
@@ -7,7 +7,6 @@ export const App = () => {
     <div>
       <Header />
       <Main />
-      <Footer />
     </div>
   )
 }

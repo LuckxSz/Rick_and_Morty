@@ -9,7 +9,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="bg-white text-black h-16 flex items-center justify-between px-4 shadow-lg rounded-b-lg">
+    <div className="bg-gray-100 text-black h-16 flex items-center justify-between px-4 shadow-lg rounded-b-lg">
       <div className="flex items-center space-x-2">
         <img
           className="w-8 h-8 rounded-full cursor-pointer"
