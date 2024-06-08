@@ -80,9 +80,10 @@ Este hook é uma função customizada do React que facilita a requisição de da
 
 ## Instalação e Uso
 
-1. Clone este repositório.
-2. Instale as dependências usando `npm install` ou `yarn install`.
-3. Inicie o servidor de desenvolvimento com `npm start` ou `yarn start`.
+1. Clone este repositório `git clone https://github.com/LuckxSz/Rick_and_Morty`
+2. Entre no diretório `cd Rick_and_Morty`
+3. Instale as dependências usando `npm install` ou `yarn install`.
+4. Inicie o servidor de desenvolvimento com `npm start` ou `yarn start`.
 
 ## Contribuição
 
