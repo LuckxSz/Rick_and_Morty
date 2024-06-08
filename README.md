@@ -1,6 +1,7 @@
 # Rick and Morty API Interface
 
-![Rick and Morty Logo]('./src/assets/overview.png')
+
+
 
 Este projeto é uma interface de usuário para visualizar personagens da série "Rick and Morty" usando a API pública fornecida pelo site [Rick and Morty API](https://rickandmortyapi.com/).
 
